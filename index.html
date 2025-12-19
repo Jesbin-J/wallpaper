@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Free Car Wallpapers • Ultra HD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Aesthetic ultra-HD car wallpapers for mobile and desktop. Free downloads.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="bg-overlay"></div>
+
+<header>
+  <h1>CARSCAPE</h1>
+  <p>Aesthetic ultra-HD car wallpapers</p>
+</header>
+
+<main class="gallery">
+
+  <article class="card">
+    <img src="https://drive.google.com/uc?export=view&id=1QKvni4xhGKNTlZHZ-_oeuOI1n8jLsFD-
+"
+         alt="Red sports car wallpaper"
+         loading="lazy"
+         onclick="openPreview(this.src)">
+    <div class="card-info">
+      <a href="wallpapers/Gemini_Generated_Image_4ylfn14ylfn14ylf-Picsart-AiImageEnhancer.png" 
+         data-src="wallpapers/supra.png"
+        onclick="setCardDownloadName(this)">Download</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="wallpapers/supra.png"
+         alt="Supercar wallpaper"
+         loading="lazy"
+         onclick="openPreview(this.src)">
+    <div class="card-info">
+      <a href="wallpapers/supra.png" download>Download</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="Gemini_Generated_Image_5w99iy5w99iy5w99-Picsart-AiImageEnhancer.png"
+         alt="Luxury car wallpaper"
+         loading="lazy"
+         onclick="openPreview(this.src)">
+    <div class="card-info">
+      <a href="Gemini_Generated_Image_5w99iy5w99iy5w99-Picsart-AiImageEnhancer.png" download>Download</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="Gemini_Generated_Image_9jpzbp9jpzbp9jpz-Picsart-AiImageEnhancer.png"
+         alt="Supercar wallpaper"
+         loading="lazy"
+         onclick="openPreview(this.src)">
+    <div class="card-info">
+      <a href="Gemini_Generated_Image_9jpzbp9jpzbp9jpz-Picsart-AiImageEnhancer.png" download>Download</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="Gemini_Generated_Image_egnv9xegnv9xegnv-Picsart-AiImageEnhancer.png"
+         alt="Supercar wallpaper"
+         loading="lazy"
+         onclick="openPreview(this.src)">
+    <div class="card-info">
+      <a href="Gemini_Generated_Image_egnv9xegnv9xegnv-Picsart-AiImageEnhancer.png" download>Download</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="Gemini_Generated_Image_hu4quehu4quehu4q-Picsart-AiImageEnhancer.png"
+         alt="Supercar wallpaper"
+         loading="lazy"
+         onclick="openPreview(this.src)">
+    <div class="card-info">
+      <a href="Gemini_Generated_Image_hu4quehu4quehu4q-Picsart-AiImageEnhancer.png" download>Download</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="Gemini_Generated_Image_i1rvuti1rvuti1rv-Picsart-AiImageEnhancer.png"
+         alt="Supercar wallpaper"
+         loading="lazy"
+         onclick="openPreview(this.src)">
+    <div class="card-info">
+      <a href="
+      Gemini_Generated_Image_i1rvuti1rvuti1rv-Picsart-AiImageEnhancer.png" download>Download</a>
+    </div>
+  </article>
+
+</main>
+
+<!-- FULLSCREEN PREVIEW -->
+<div id="preview" onclick="closePreview()">
+  <span class="close">&times;</span>
+  <img id="preview-img">
+  <a id="preview-download" download>Download</a>
+</div>
+
+
+
+<footer>
+  <p>© 2025 CARSCAPE • Free for personal use</p>
+</footer>
+
+
+
+
+<script>
+const preview = document.getElementById("preview");
+const previewImg = document.getElementById("preview-img");
+const previewDownload = document.getElementById("preview-download");
+
+function openPreview(src) {
+  previewImg.src = src;
+
+  // 🔹 CREATE CUSTOM FILE NAME: carwall-YYYYMMDD-HHMMSS.png
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth()+1).padStart(2,'0');
+  const day = String(now.getDate()).padStart(2,'0');
+  const hours = String(now.getHours()).padStart(2,'0');
+  const minutes = String(now.getMinutes()).padStart(2,'0');
+  const seconds = String(now.getSeconds()).padStart(2,'0');
+
+  const customName = `carwall-${year}${month}${day}-${hours}${minutes}${seconds}.png`;
+
+  previewDownload.href = src;
+  previewDownload.download = customName;
+
+  preview.classList.add("show");
+  document.body.style.overflow = "hidden";
+}
+
+function closePreview() {
+  preview.classList.remove("show");
+  previewImg.src = "";
+  document.body.style.overflow = "";
+}
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closePreview();
+});
+
+previewImg.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
