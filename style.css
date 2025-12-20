@@ -179,3 +179,55 @@ footer {
   cursor: zoom-in;
 }
 
+@media (max-width: 768px) {
+
+  header {
+    padding: 40px 15px 20px;
+  }
+
+  header h1 {
+    font-size: 2.4rem;
+    letter-spacing: 3px;
+  }
+
+  header p {
+    font-size: 0.95rem;
+  }
+
+  .gallery {
+    padding: 20px 15px 40px;
+    gap: 20px;
+  }
+
+  .card {
+    border-radius: 14px;
+  }
+
+  .card-info {
+    padding: 14px;
+  }
+
+  .card-info a {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+  }
+
+  #preview-img {
+    max-width: 95%;
+    max-height: 80vh;
+  }
+
+  #preview-download {
+    padding: 10px 22px;
+    font-size: 0.9rem;
+  }
+
+  #preview .close {
+    font-size: 2.2rem;
+    top: 15px;
+    right: 20px;
+  }
+}
+
+
+
